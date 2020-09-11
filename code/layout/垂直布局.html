@@ -1,36 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Document</title>
 
     <style>
-        .box1 {
-            /* 父元素的高度如果不设置, 则取决于子元素的高度 */
-            /* 
+      .box1 {
+        /* 父元素的高度如果不设置, 则取决于子元素的高度 */
+        /* 
             1. 如果子元素的高度大于父元素的高度, 则会溢出
             */
-            width: 400px;
-            height: 200px;
-            background-color:aqua;
-            overflow: visible;
-        }
-        .box2 {
-            height: 150px;
-            width: 300px;
-            background-color: bisque;
-        }
-        .box3{
-            height: 150px;
-            background-color: rebeccapurple;
-        }
+        width: 400px;
+        height: 200px;
+        background-color: aqua;
+        overflow: visible;
+      }
+      .box2 {
+        height: 150px;
+        width: 300px;
+        background-color: bisque;
+      }
+      .box3 {
+        height: 150px;
+        background-color: rebeccapurple;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="box1">
-        <div class="box2"> </div>
-        <div class="box3"></div>
+      <div class="box2"></div>
+      <div class="box3"></div>
     </div>
-    
-</body>
+  </body>
 </html>
