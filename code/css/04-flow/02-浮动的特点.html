@@ -20,8 +20,34 @@
       }
 
       .box2{
-        background-color: azure;
+        background-color:red;
+        /* 
+            元素设置浮动后，会脱离文档流, 因此元素的一些特点也随着发生变化:
+            
+            脱离文档流的特点:
+                块元素:
+                    1. 块元素不再独占页面的一行
+                    2. 脱离文档流后块元素的宽度和高度都被内容撑开
+
+         */
+        float: left;
       }
+
+      .box3{
+        /* float: left; */
+      }
+
+      .s1 {
+        /* 
+            浮动对于行内元素的影响：
+                行内元素脱离文档流后会变为块元素， 特点和块元素一样
+         */
+        float: left;
+        width: 100px;
+        height: 100px;
+        background-color: #bfa;
+      }
+      /* 脱离文档流后不用再区分块和行内元素 */
     </style>
   </head>
   <body>
@@ -46,5 +72,6 @@
     </p> -->
     <div class="box2">hello</div>
     <div class="box3">morning</div>
+    <span class="s1">good</span>
   </body>
 </html>
