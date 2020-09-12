@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      .box1 {
+        width: 200px;
+        height: 200px;
+        margin: 100px;
+        background-color: #bfa;
+        /* 
+        outline: 轮廓线，用法和border一样
+              不影响可见框大小，不向外扩充(不挤占其他元素的位置)
+         */
+        /* outline: 10px solid rebeccapurple; */
+
+        /* 
+        box-shadow
+          用来设置元素的阴影效果，但是不会影响布局
+          第一个值， 设置阴影的水平位置，正值向右移动，负值向左移动
+          第二个值：设置阴影的垂直位置
+          第三个值：设置阴影的模糊半径
+          第四个值：阴影的颜色，通常用rgba来实现透明效果
+        */
+        /* box-shadow:
+        10px 10px 10px rgba(0, 0, 0, 0.3),
+        -10px -10px 10px rgba(0, 0 , 0, 0.3);
+        */
+        /* 
+        border-radius 设置圆角的半径
+        border-top-left-radius: ;
+        */
+
+        /* border-radius: 10px 20px 30px; */
+
+        /* 设置圆形 */
+        border-radius: 50%;
+      }
+      /* .box1:hover{
+        outline: 10px solid rebeccapurple;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="box1"></div>
+    <span>abcd</span>
+  </body>
+</html>
