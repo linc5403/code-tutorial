@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /*
+        水平布局
+            约束条件：
+                left + margin + padding + width + right = 包含块的宽度
+        - 当我们开启了绝对定位后：
+            发生过度约束时，如果9个值中没有auto则自动调整right的值以使得等式成立
+                            如果有auto则调整auto的值以使等式满足
+          - 可设置auto的属性：
+                left， right， margin，width
+          - 因为left和right的默认值是auto， 所以当等式不满足时会自动设置left和right
+        垂直布局：
+            也必须满足上下的等式成立
+        因此如果想要元素垂直水平都居中，最简单的方法是设置margin为auto
+
+    */
+
+    .box1{
+      width: 500px;
+      height: 500px;
+      background-color: #bfa;
+      position: relative;
+    }
+
+    .box2{
+      width:100px;
+      height: 100px;
+      background-color: orchid;
+      position:absolute;
+      margin: auto;
+      left:0;
+      right: 0;
+      top:0;
+      bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="box1">
+    <div class="box2"></div>
+  </div>
+</body>
+</html>

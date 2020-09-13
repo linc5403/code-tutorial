@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box1 {
+        width: 200px;
+        height: 200px;
+        background-color: aqua;
+      }
+      /* .box1::before{
+        content: '';
+        display: table;
+      } */
+      .box2 {
+        width: 100px;
+        height: 100px;
+        background-color: aliceblue;
+        /*  子元素的外边距会传递到父元素上， 
+          导致父元素的位置发生偏移， 此现象成为外边距重叠
+          通过设置伪元素::before可以解决外边距重叠问题，即不让子元素的margin传递到父元素上
+          ::before{
+            content: '';
+            display: table;
+          }  
+        */
+        margin-top: 100px;
+      }
+      /* 通过clearfix同时解决高度坍塌和外边距重叠的问题
+     */
+
+      .clearfix::before,    /* 外边距重叠 */
+      .clearfix::after  /* 高度坍塌 */ {
+        content: "";
+        display: table; /* 表格没有内容时高度为0 */
+        clear: both; /* 清除上面所有元素的浮动影响 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1 clearfix">
+      <div class="box2"></div>
+    </div>
+  </body>
+</html>

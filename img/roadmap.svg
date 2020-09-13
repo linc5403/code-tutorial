@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="191px" preserveAspectRatio="none" style="width:236px;height:191px;" version="1.1" viewBox="0 0 236 191" width="236px" zoomAndPan="magnify"><defs><filter height="300%" id="f1cdskfeedxfb3" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FEFECE" filter="url(#f1cdskfeedxfb3)" height="40.2719" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="76" x="10" y="80.2719"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="56" x="20" y="106.5118">编程入门</text><rect fill="#FEFECE" filter="url(#f1cdskfeedxfb3)" height="40.2719" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="57" x="136" y="20"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="37" x="146" y="46.2399">HTML</text><path d="M86,100.4079 L96,100.4079 C111,100.4079 111,40.136 126,40.136 L136,40.136 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/><rect fill="#FEFECE" filter="url(#f1cdskfeedxfb3)" height="40.2719" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="45" x="136" y="80.2719"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="25" x="146" y="106.5118">CSS</text><path d="M86,100.4079 L96,100.4079 C111,100.4079 111,100.4079 126,100.4079 L136,100.4079 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/><rect fill="#FEFECE" filter="url(#f1cdskfeedxfb3)" height="40.2719" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="89" x="136" y="140.5438"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="69" x="146" y="166.7838">JavaScript</text><path d="M86,100.4079 L96,100.4079 C111,100.4079 111,160.6798 126,160.6798 L136,160.6798 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[1426cd837436c0ce4c472e0eb3fb8a7c]
+@startmindmap
+* 编程入门
+** HTML
+** CSS
+** JavaScript
+@endmindmap
+
+PlantUML version 1.2020.06(Sun Apr 05 20:38:32 CST 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.8+10-post-Ubuntu-0ubuntu120.04
+Operating System: Linux
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

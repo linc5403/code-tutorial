@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box1 {
+        background-color: green;
+        border: 10px red solid;
+      }
+      .box2 {
+        width: 100px;
+        height: 100px;
+        background-color: chartreuse;
+        float: left;
+      }
+      .box3 {
+        width: 100px;
+        height: 100px;
+        background-color: orchid;
+        float: right;
+      }
+      .box4 {
+        width: 100px;
+        height: 100px;
+        background-color: #bfa;
+      }
+
+      /* 
+        高度坍塌出現的原因：
+            我们使用float来进行布局，会导致元素脱离文档流，
+                而父元素的高度是由子元素所撑满的， 
+                子元素脱离文档流后父元素的高度不再足以支撑所有的子元素，
+                因此发生了高度坍塌
+        
+        解决方法：
+            在父元素的::after伪元素中设置clear属性, 以清除父元素中浮动元素的影响
+            注意还需要通过display: block;将该伪元素转变为block元素
+     */
+      .box1::after {
+        content: "";
+        clear: both;
+        display: block;
+      }
+      /* .box0{
+      clear: both;
+    } */
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      <div class="box2">asdfbg</div>
+      <div class="box3">oooo</div>
+      <div class="box0"></div>
+    </div>
+    <div class="box4"></div>
+  </body>
+</html>
