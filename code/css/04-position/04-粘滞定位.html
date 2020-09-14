@@ -4,13 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="../02-layout/reset.css" />
     <style>
       /* 
         粘滞定位（sticky）
             - 和相对定位特点基本一致
             - 不同点是粘滞定位可以在元素到达某个位置时将其固定
      */
+      body {
+        height: 2000px;
+      }
+      ul::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      ul {
+        background-color: aqua;
+        position: sticky;
+        top: 50px;
+        margin: 100px 266px;
+      }
+      li {
+        list-style: none;
+        float: left;
+        margin: 10px;
+        width: 80px;
+        background-color: #bfa;
+      }
     </style>
   </head>
-  <body></body>
+  <body>
+    <ul>
+      <li>aaaa</li>
+      <li>bbbb</li>
+      <li>cccc</li>
+      <li>dddd</li>
+    </ul>
+  </body>
 </html>
