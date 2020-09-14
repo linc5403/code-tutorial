@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 将服务器的字体直接提供给用户使用
+          1. 加载速度较慢
+          2. 版权问题
+       */
+      @font-face {
+        font-family: "myfont";
+        /* 服务器中字体的路径 */
+        src: url("./font/asdf.ttf") format("truetype");
+      }
+      p {
+        /* 字体相关的样式
+          color 用来设置字体颜色
+          font-size 相关单位
+              em  当前元素的font-size
+              rem root元素的font-size
+          font-family 字体族
+            - 字体的分类(浏览器会自动使用该类别下的具体字体)
+              serif         衬线体  
+              sans-serif    非衬线体
+              monospace     等宽字体
+              cursive       草书字体
+              fantasy       虚幻字体
+       */
+      }
+    </style>
+  </head>
+  <body>
+    <p>今天天气很不错, how are you</p>
+  </body>
+</html>
