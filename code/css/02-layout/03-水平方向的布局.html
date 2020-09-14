@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 一个元素在其父元素中，则必须满足：
+          *所有水平方向的width之和为其父元素width（内容宽度）*
+          不满足上述条件则称之为过渡约束， 浏览器会进行自动调整：
+              - width的默认值为auto
+              - 如果没有auto属性，则会自动调整margin-right
+              - 如果width和margin都为auto， 则width调整为最大， margin为auto的属性调整为0
+              - *如果两个margin都为auto， 而width不为auto则居中显示*
+   -->
+  </body>
+</html>

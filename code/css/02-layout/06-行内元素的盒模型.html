@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      span {
+        width: 100px;
+        height: 100px;
+        background-color: bisque;
+        padding: 10px;
+      }
+      .span1 {
+        display: block;
+        padding: 0;
+      }
+      span:not(.span1) {
+        background-color: blueviolet;
+        padding:0;
+      }
+      .a {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="a"></div>
+    <span class="span1">aaaa</span>
+    <span class="span2">bbbb</span>
+    <span class="span3">cccc</span>
+    <span class="span4">dddd</span>
+    <div class="a"></div>
+  </body>
+</html>

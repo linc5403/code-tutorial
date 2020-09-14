@@ -5,7 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      /* 相邻垂直方向的元素外边距会发生重叠现象 */
+      /* 相邻垂直方向的元素外边距会发生重叠现象
+            兄弟元素：
+                - 两者都为正， 取边距较大值
+                - 两者都为负， 取边距绝对值大值
+                - 一正一负， 取其和
+            父子元素：
+                - 子元素的属性会传递给父元素
+                - 靠浮动或定位来解决这个问题
+      */
       div {
         margin: 0px;
       }
