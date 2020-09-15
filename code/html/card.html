@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>记牌小游戏</title>
+    <link rel="stylesheet" href="css/matchgame.css" />
+
+    <style>
+      body {
+        text-align: center;
+        background: url("../img/bg.jpg");
+      }
+      #timer {
+        margin: 10px 0;
+      }
+
+      #game {
+        background: url("../img/table.jpg");
+        width: 500px;
+        height: 460px;
+        margin: 0 auto;
+        border-radius: 10px;
+        /* border: 1px solid #666; */
+        /* box-shadow: 0 1px 6px #000 inset; */
+        display: flex;
+      }
+      #cards{
+        width: 380px;
+        height: 400px;
+      }
+
+      .card{
+        width: 80px;
+        height: 120px;
+        background-image: url("../img/deck.png");
+      }
+      .back{
+        background-position: 0 -480px;
+      }
+      
+      
+    </style>
+  </head>
+
+  <body>
+    <h1>记牌小游戏</h1>
+    <div id="timer">耗时: <span id="elapsed-time">00:00</span></div>
+    <section id="game">
+      <div id="cards">
+        <div class="card back"></div>
+      </div>
+    </section>
+  </body>
+</html>
