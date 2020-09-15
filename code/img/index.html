@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>记牌小游戏</title>
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+    <h1>记牌小游戏</h1>
+    <div id="timer">
+        耗时: <span id="elapsed-time">00:00</span>
+    </div>
+    <section id="game">
+        <div id="cards">
+            <div class="card">
+                <div class="face front"></div>
+                <div class="face back"></div>
+            </div>
+        </div>
+    </section>
+    <section id="popup" class="hide">
+        <div id="popup-box">
+            <div id="popup-box-content">
+                <h1>你赢了</h1>
+                <p>耗时</p>
+                <p><span class='score'>00:00</span></p>
+            </div>
+        </div>
+    </section>
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
