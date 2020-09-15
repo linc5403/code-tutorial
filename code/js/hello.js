@@ -1,11 +1,12 @@
-var a = [];
+var a = new Object();
+a.data = [];
 for (let i = 0; i < 10; i++) {
-  a.push(Math.floor(Math.random() * 10));
+  a.data.push(Math.floor(Math.random() * 10));
   // a[i] = Math.floor(Math.random() * 10);
 }
 console.log("a :>> ", a);
 
-a.forEach(element => {
+a.data.forEach(element => {
   console.log('element :>> ', element);
 });
 
@@ -25,8 +26,8 @@ function sort(a) {
     }
   }
 };
-
-// selectSort(a);
-sort(a);
+a.selectSort = sort;
+a.selectSort(a.data);
+// sort(a);
 
 console.log("a :>> ", a);
