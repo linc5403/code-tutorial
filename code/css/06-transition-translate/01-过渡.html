@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box1{
+      width: 800px;
+      height: 800px;
+      background-color: silver;
+    }
+    .box2{
+      width: 100px;
+      height: 100px;
+      background-color: #bfa;
+      /* 过渡:
+            - 通过过渡指定一个属性发生变化时的切换方式
+            - 通过过度可以创建较好的用户体验
+            - 必须指定transition-property和transition-duration
+                - transition-property指发生变换的属性, 包括all及属性名, 常用的例如width, height等
+                - transition-duration指的是过渡时长
+       */
+      transition: all 0.15s;
+      transition-timing-function: linear;
+      
+      /* transition-property: ; */
+      /* transition-duration: ; */
+    }
+    .box1:hover .box2{
+      width: 200px;
+      height: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box1">
+    <div class="box2"></div>
+  </div>
+</body>
+</html>

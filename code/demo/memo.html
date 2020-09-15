@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/02-layout/reset.css" />
+    <title>便签</title>
+    <style>
+      body {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      ul {
+        margin-top: 200px;
+        background-color: blue;
+      }
+      li {
+        width: 200px;
+        height: 200px;
+        background-color: bisque;
+        font-size: 0.8em;
+        list-style: none;
+        padding: 5px;
+        margin: 10px;
+        float: left;
+        position: relative;
+        /* transition: transform 0.15s linear; */
+        transition: all 0.15s;
+      }
+      li:nth-child(2n + 1) {
+        transform: rotateZ(-20deg);
+      }
+      li:nth-child(2n) {
+        background-color: aquamarine;
+        transform: rotateZ(10deg);
+      }
+      li:hover {
+        
+        transform: scale(1.2);
+        z-index: 3;
+      }
+      h2 {
+        margin-top: 20px;
+        text-align: center;
+        font-size: 1.5em;
+      }
+      h3 {
+        text-align: right;
+        padding-top: 20px;
+        padding-right: 20px;
+      }
+      p {
+        margin-top: 20px;
+        font-size: 1.2em;
+        text-align: center;
+        line-height: 1.5em;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <hgroup>
+          <h2>所见</h2>
+          <h3>&lt;宋>袁枚</h3>
+          <p>
+            牧童骑黄牛<br />
+            歌声振林樾<br />
+            意欲捕鸣蝉<br />
+            忽然闭口立
+          </p>
+        </hgroup>
+      </li>
+      <li>
+        <hgroup>
+          <h2>山行</h2>
+          <h3>&lt;唐>杜牧</h3>
+          <p>
+            远上寒山石径斜<br />
+            白云深处有人家<br />
+            停车做爱枫林晚<br />
+            霜叶红于二月花
+          </p>
+        </hgroup>
+      </li>
+      <li>
+        <hgroup>
+          <h2>长歌行(节选)</h2>
+          <h3>汉乐府</h3>
+        </hgroup>
+        <p>
+          青青园中葵<br />
+          朝露待日晞<br />
+          阳春布德泽<br />
+          万物生光辉
+        </p>
+      </li>
+      <li>
+        <hgroup>
+          <h2>敕勒歌</h2>
+          <h3>北朝民歌</h3>
+          <p>
+            敕勒川 阴山下<br />
+            天似穹庐 笼盖四野<br />
+            天苍苍 野茫茫<br />
+            风吹草地见牛羊
+          </p>
+        </hgroup>
+      </li>
+    </ul>
+  </body>
+</html>

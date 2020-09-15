@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box1 {
+        position: relative;
+        width: 800px;
+        height: 800px;
+        background-color: silver;
+      }
+      .box2 {
+        width: 200px;
+        height: 200px;
+        background-color: #bfa;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        transform: rotateZ(10deg);
+        box-shadow: 10px 10px 10px 10px rgba(200, 0, 0, 0.3);
+        transition: all 0.3s;
+      }
+      .box1:hover .box2 {
+        transform: rotateZ(0deg) scale(1.2);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      <div class="box2"></div>
+    </div>
+  </body>
+</html>
