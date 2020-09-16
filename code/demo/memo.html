@@ -7,12 +7,17 @@
     <title>便签</title>
     <style>
       body {
+        position: relative;
         font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
           "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+        background-color: burlywood;
+        left: 0;
+        right: 0;
+        margin: auto;
       }
       ul {
-        margin-top: 200px;
-        background-color: blue;
+        margin: 50px;
       }
       li {
         width: 200px;
@@ -26,6 +31,7 @@
         position: relative;
         /* transition: transform 0.15s linear; */
         transition: all 0.15s;
+        box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.3);
       }
       li:nth-child(2n + 1) {
         transform: rotateZ(-20deg);
@@ -35,7 +41,6 @@
         transform: rotateZ(10deg);
       }
       li:hover {
-        
         transform: scale(1.2);
         z-index: 3;
       }
