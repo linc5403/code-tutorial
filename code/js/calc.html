@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./calc.js"></script>
     <title>Document</title>
     <style>
       .box {
@@ -15,7 +16,8 @@
         right: 0;
         margin: auto;
       }
-      .operator, .result {
+      .operator,
+      .result {
         margin-left: 200px;
         margin-right: 10px;
         float: left;
@@ -52,30 +54,5 @@
         <input type="text" id="result" disabled />
       </div>
     </div>
-    <p id="prlt"></p>
-
-    <script>
-      function run() {
-        var num1 = Number(document.getElementById("num1").value);
-        var num2 = Number(document.getElementById("num2").value);
-        var op = document.getElementById("op").value;
-        var rlt;
-        console.log(num1);
-        console.log(num2);
-        console.log(op);
-        switch (op) {
-          case "+":
-            rlt = num1 + num2;
-            break;
-          case "-":
-            rlt = num1 - num2;
-            break;
-        }
-        document.getElementById("result").value = rlt;
-        // document.write(num1);
-        // document.write("Hello, world!");
-        document.getElementById("prlt").innerText = rlt;
-      }
-    </script>
   </body>
 </html>
