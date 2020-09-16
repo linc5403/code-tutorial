@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 300px;
+        font-family: monospace;
+        font-size: 2em;
+      }
+      .operand {
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+      .operator, .result {
+        margin-left: 200px;
+        margin-right: 10px;
+        float: left;
+      }
+      .run {
+        float: left;
+      }
+      .result {
+        float: right;
+        margin-right: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="operand">
+        <span>操作数1：</span><input type="text" id="num1" /><br />
+      </div>
+      <div class="operand">
+        <span>操作数2：</span><input type="text" id="num2" /><br />
+      </div>
+      <div class="operator">
+        <select name="op" id="op">
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="*">*</option>
+          <option value="/">/</option>
+        </select>
+      </div>
+      <div class="run">
+        <button onclick="run()">=</button>
+      </div>
+      <div class="result">
+        <input type="text" id="result" disabled />
+      </div>
+    </div>
+    <p id="prlt"></p>
+
+    <script>
+      function run() {
+        var num1 = Number(document.getElementById("num1").value);
+        var num2 = Number(document.getElementById("num2").value);
+        var op = document.getElementById("op").value;
+        var rlt;
+        console.log(num1);
+        console.log(num2);
+        console.log(op);
+        switch (op) {
+          case "+":
+            rlt = num1 + num2;
+            break;
+          case "-":
+            rlt = num1 - num2;
+            break;
+        }
+        document.getElementById("result").value = rlt;
+        // document.write(num1);
+        // document.write("Hello, world!");
+        document.getElementById("prlt").innerText = rlt;
+      }
+    </script>
+  </body>
+</html>
