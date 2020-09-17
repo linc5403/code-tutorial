@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      height: 3000px;
+    }
+  .fa{
+    /* position: sticky; */
+    /* top: 100px; */
+    margin-top:200px;
+    margin: 200px;
+    width: 200px;
+    height: 200px;
+    background-color: #bfa;
+    position: relative;
+    z-index: 100;
+  }
+  .son{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    /* left:0px;
+    right:0px;
+    top:0px;
+    bottom:0px;
+    margin: auto; */
+    background-color: burlywood;
+    /* z-index: 0; */
+    z-index: 10;
+  }
+  .bro{
+    /* position: fixed; */
+    position: relative;
+    /* left:0px;
+    top: 0px; */
+    top: -50px;
+    width:100px;
+    height: 100px;
+    background-color: black;
+  }
+</style>
+</head>
+<body>
+  <div class="fa">
+    <div class="son"></div>
+    <div class="bro"></div>
+  </div>
+</body>
+</html>
