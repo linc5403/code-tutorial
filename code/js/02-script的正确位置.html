@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+      如果将script写到html中, 则会在遇到script的时候就执行其中的代码, 而这是有可能HTML未能加载完全.
+      从而导致脚本获取不到所需的元素. 因此, 如果真的需要放到HTML文件中有两种方式:
+          1. 放到body最后面
+          2. 使用hello.html中类似的方法, 监听文档的"DOMContentLoaded"事件
+      所以, 我们通常还是使用js单独存放, 在html文件中引入js的方式来进行部署, 请参考calc.html中的代码
+    -->
+    <script>
+      document.getElementById("sayHello").innerHTML = "Hello, " + "张三";
+    </script>
+    <p id="sayHello"></p>
+  </body>
+</html>

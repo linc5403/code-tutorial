@@ -1,0 +1,20 @@
+<html>
+  <body>
+    <p id="out"></p>
+    <script>
+      let input = prompt("请输入运算符号");
+      let output = document.getElementById("out");
+      output.innerHTML = "你输入的";
+      switch (input) {
+        case "+":
+          output.innerHTML += "+";
+          break;
+        case "-":
+          output.innerHTML += "-";
+          break;
+        default:
+          output.innerHTML += "符号无法处理";
+      }
+    </script>
+  </body>
+</html>

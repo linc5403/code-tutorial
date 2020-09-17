@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <p id="sayHello"></p>
-  <script>
-    var yourName = prompt("What's your name?");
-    if (yourName != null) {
-      document.getElementById("sayHello").innerHTML = "Hello, " + yourName;
-    } else {
-      alert("Please enter a name next time")
-    }
-  </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="sayHello"></p>
+    <script>
+      // 什么是function?
+      // 就是一段连续执行而且有独立含义的语句, 我们可以将之称为一个函数
+      document.addEventListener("DOMContentLoaded", function () {
+        let yourName = prompt("What's your name?");
+        // 关于var和let
+        // var主要用于兼容早期浏览器, 有一定的问题
+        // 我们现在优先选择使用let; 等你进入项目组后按照项目组的要求使用
+        if (yourName != null) {
+          document.getElementById("sayHello").innerHTML = "Hello, " + yourName;
+        } else {
+          alert("Please enter a name next time");
+        }
+      });
+    </script>
+  </body>
 </html>

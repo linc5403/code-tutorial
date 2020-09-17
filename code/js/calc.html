@@ -3,31 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="./calc.js"></script>
+    <script src="./calc.js" async></script>
+    <!-- 关于async和differ
+            - 如果脚本无需等待页面解析，且无依赖独立运行，那么应使用 async。
+            - 如果脚本需要等待页面解析，且依赖于其它脚本，调用这些脚本时应使用 defer，将关联的脚本按所需顺序置于 HTML 中。 
+    -->
     <title>Document</title>
     <style>
       .box {
-        width: 300px;
+        margin: 50x;
+        width: 210px;
         font-family: monospace;
         font-size: 2em;
+        background-color: aqua;
+      }
+      .box::after {
+        content: "";
+        display: block;
+        clear: both;
       }
       .operand {
         left: 0;
-        right: 0;
         margin: auto;
       }
+      .operand:first-child {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+      span {
+        line-height: 0.8em;
+      }
       .operator,
-      .result {
-        margin-left: 200px;
-        margin-right: 10px;
-        float: left;
+      .run {
+        float: right;
+      }
+
+      .run {
+        margin-right: 5px;
       }
       .run {
-        float: left;
-      }
-      .result {
         float: right;
-        margin-right: 30px;
+      }
+      input {
+        width: 200px;
       }
     </style>
   </head>
@@ -39,6 +57,9 @@
       <div class="operand">
         <span>操作数2：</span><input type="text" id="num2" /><br />
       </div>
+      <div class="run">
+        <button onclick="run()">=</button>
+      </div>
       <div class="operator">
         <select name="op" id="op">
           <option value="+">+</option>
@@ -47,9 +68,7 @@
           <option value="/">/</option>
         </select>
       </div>
-      <div class="run">
-        <button onclick="run()">=</button>
-      </div>
+
       <div class="result">
         <input type="text" id="result" disabled />
       </div>
