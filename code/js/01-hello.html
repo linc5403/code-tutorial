@@ -16,6 +16,7 @@
         // var主要用于兼容早期浏览器, 有一定的问题
         // 我们现在优先选择使用let; 等你进入项目组后按照项目组的要求使用
         if (yourName != null) {
+          // 如果用户没有输入, 则yourName这个变量的值会是null, 表示没有意义
           document.getElementById("sayHello").innerHTML = "Hello, " + yourName;
         } else {
           alert("Please enter a name next time");

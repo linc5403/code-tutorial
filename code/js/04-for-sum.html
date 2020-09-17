@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <style>
+      #out {
+        font-size: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="out"></p>
+    <script>
+      let n = Number(prompt("请输入一个大于n的值"));
+      let output = document.getElementById("out");
+      if (n > 0) {
+        output.innerHTML = "1+..+" + n + "的值是";
+        let i, sum;
+        sum = 0
+        for (i = 1; i <= n; i++) {
+          sum = sum + i;
+        }
+        output.innerHTML += sum;
+      } else {
+        output.innerHTML = "请下次输入一个大于0的值";
+      }
+    </script>
+  </body>
+</html>
