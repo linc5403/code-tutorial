@@ -1,4 +1,5 @@
-var a = new Object();
+let a;
+a = new Object();
 a.data = [];
 for (let i = 0; i < 10; i++) {
   a.data.push(Math.floor(Math.random() * 10));
