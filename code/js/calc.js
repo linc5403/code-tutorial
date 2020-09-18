@@ -7,7 +7,7 @@ function run() {
   let rlt;
   // your code ...
 
-  document.getElementById("result").value = rlt;
+  document.getElementById("result").value = op + num1 + num2;
 }
 
 runButton.addEventListener("click", run);

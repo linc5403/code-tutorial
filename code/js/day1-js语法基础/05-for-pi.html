@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script src="./05-pi.js" async></script>
     <style>
       #output {
         font-size: 30px;
@@ -15,28 +16,5 @@
     <input type="text" id="input" />
     <button id="run">run</button>
     <p id="output"></p>
-    <script>
-      document.getElementById("run").addEventListener("click", () => {
-        let input = document.getElementById("input").value;
-        let inNum = Number(input);
-        console.log(inNum);
-        let output = document.getElementById("output");
-        if (Number.isInteger(inNum) && inNum > 0) {
-          // 计算pi
-          let i, sum, flag, item;
-          flag = 1;
-          sum = 0;
-          for (i = 0; i <= inNum; i++) {
-            item = flag / (i * 2 + 1);
-            sum += item;
-            flag = -flag;
-          }
-          let pi = sum * 4;
-          output.innerHTML = "按照" + inNum + "计算的pi值是" + pi;
-        } else {
-          output.innerHTML = "请输入一个大于0的整数";
-        }
-      });
-    </script>
   </body>
 </html>
