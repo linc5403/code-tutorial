@@ -21,6 +21,6 @@ document.getElementById("run").addEventListener("click", () => {
     let pi = calcSum(inNum) * 4;
     output.innerHTML = "按照" + inNum + "计算的pi值是" + pi;
   } else {
-    output.innerHTML = "请输入一个大于0的整数";
+    output.innerHTML = "请输入一个大于0的整数 ";
   }
 });
