@@ -23,16 +23,15 @@ function run() {
     } else {
       log.innerHTML += " " + guess;
     }
-    input.value = null;
   } else {
-    log.innerHTML += " " + guess;
+    log.innerHTML += "泰 " + guess;
     result.innerHTML = "你猜对了, 结果是" + target + "<br><br> 再来一次";
     times.innerHTML = "";
-    input.value = "";
 
     count = 0;
     target = Math.floor(Math.random() * 100);
   }
+  input.value = "";
   input.focus();
 }
 
