@@ -4,19 +4,22 @@ const runButton = document.getElementById("run");
 input.focus();
 
 function reverse(n) {
-  let count = 0;
-  n = Math.abs(n);
+  let result = "";
   do {
-    count++;
+    result += n % 10;
     n = Math.floor(n / 10);
-  } while (n !== 0);
-  // let count = 1;
-  // n = Math.abs(n);
-  // while(n > 9){
+  } while (n > 0);
+  // 对于一个负数, 使用 n!==0 的判断会导致死循环, 请问为什么?
+  // 再进一步想一下如果想处理负数, 可以怎么实现
+  // } while( n !== 0);
+
+  // 以下这种方式是使用一个数字来保存输出, 但是对于1000这样的输入会输出什么? 请试一试
+  // let result;
+  // while(n > 0) {
+  //   result = result * 10 + n % 10;
   //   n = Math.floor(n / 10);
-  //   count++;
   // }
-  return count;
+  return result;
 }
 
 function run() {
