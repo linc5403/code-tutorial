@@ -3,26 +3,31 @@ const result = document.getElementById("result");
 const runButton = document.getElementById("run");
 input.focus();
 
-function pi(last) {
-  let fenMu = 1,
-    flag = 1,
-    sum = 0;
-  let item;
+function reverse(n) {
+  let rlt = "";
+  let v;
 
   do {
-    item = flag / fenMu;
-    console.log(item);
-    sum += item; // item的值已经加入到sum中，所以不需要再循环体外面再加一次item
-    fenMu += 2;
-    flag = -flag;
-  } while (Math.abs(item) >= last);
+    v = n % 10; // -1
+    rlt += v; // "-1"
+    n = Math.floor(n / 10); // -1
+  } while (n != 0);
 
-  return sum * 4;
+  // v = n % 10; // --> 个位
+  // rlt += v;
+  // n = Math.floor(n / 10);
+  // v = n % 10; // --> 十位
+  // rlt += v;
+  // n = Math.floor(n / 10);
+  // v = n % 10; // --> 百位
+  // rlt += v;
+  return rlt;
 }
 
 function run() {
-  const lastItem = Number(input.value);
-  result.innerHTML = "last = " + lastItem + "<br>" + "Pi = " + pi(lastItem);
+  const inNum = Number(input.value);
+  let output = reverse(inNum);
+  result.innerHTML = inNum + "的逆序是" + output;
   input.value = null;
   input.focus();
 }

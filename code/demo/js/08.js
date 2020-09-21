@@ -3,26 +3,29 @@ const result = document.getElementById("result");
 const runButton = document.getElementById("run");
 input.focus();
 
-function pi(last) {
-  let fenMu = 1,
-    flag = 1,
-    sum = 0;
-  let item;
-
+function calcWidth(n) {
+  let count = 0;
+  n = Math.abs(n);
   do {
-    item = flag / fenMu;
-    console.log(item);
-    sum += item; // item的值已经加入到sum中，所以不需要再循环体外面再加一次item
-    fenMu += 2;
-    flag = -flag;
-  } while (Math.abs(item) >= last);
+    count++;
+    n = n / 10;
+  } while (n >= 1);
 
-  return sum * 4;
+  // if (n === 0) {
+  //   return 1;
+  // }
+
+  // while(n >= 1) {
+  //   n = n / 10;
+  //   count++;
+  // }
+  return count;
 }
 
 function run() {
-  const lastItem = Number(input.value);
-  result.innerHTML = "last = " + lastItem + "<br>" + "Pi = " + pi(lastItem);
+  const inNum = Number(input.value);
+  let output = calcWidth(inNum);
+  result.innerHTML = inNum + "有" + output + "位";
   input.value = null;
   input.focus();
 }
