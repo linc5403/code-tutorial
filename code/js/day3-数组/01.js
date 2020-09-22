@@ -19,9 +19,47 @@ let s = [
 let runButton = document.getElementById("run");
 runButton.addEventListener("click", run);
 let result = document.getElementById("result");
+let input = document.getElementById("input");
+input.focus();
+
 function run() {
-  let prize = s[Math.floor(Math.random() * s.length)];
-  result.innerHTML = "今天示范 " + prize + " 的作业";
+  let number = Number(input.value);
+  // let prize = s[Math.floor(Math.random() * s.length)];
+  let randSeq = randN(s.length);
+  let choosen = randSeq.slice(0, number);
+  let out = "";
+  for (let i of choosen) {
+    out += s[i] + " ";
+  }
+  result.innerHTML = out;
+  input.focus();
 }
 
+// 生成n个随机数列
+function randN(n) {
+  let base = [];
+  for (let i = 0; i < n; i++) {
+    base.push(i);
+  }
 
+  for (let i = 0; i < n - 1; i++) {
+    // 从i到n-1中选出一个随机数
+    let r = Math.floor(Math.random() * (n - i)) + i;
+    if (r != i) {
+      let t = base[r];
+      base[r] = base[i];
+      base[i] = t;
+    }
+  }
+
+  return base;
+}
+
+input.addEventListener("keyup", function (event) {
+  if (event.code === "Enter") {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    runButton.click();
+  }
+});
