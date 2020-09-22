@@ -25,10 +25,21 @@ class SeqList {
     this.array.length--;
     return r;
   }
+
+  print() {
+    let out = "";
+    for (let e of this.array) {
+      out += e + " ";
+    }
+    console.log(out);
+    return out;
+  }
+
+  isEmpty() {
+    return this.array.length === 0;
+  }
 }
 
-let s = new SeqList();
-s.insert(10, 0);
-s.insert(20, 0);
-s.delete(0);
-s.delete(0);
+module.exports = {
+  SeqList,
+};
