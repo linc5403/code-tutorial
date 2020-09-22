@@ -1,5 +1,8 @@
 const list = require("./01-顺序表");
 
+console.log("********************************************");
+console.log(list);
+
 let l = new list.SeqList();
 
 // 线性表的插入

@@ -43,3 +43,5 @@ class SeqList {
 module.exports = {
   SeqList,
 };
+
+console.log(module);
