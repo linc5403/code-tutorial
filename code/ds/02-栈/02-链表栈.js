@@ -82,3 +82,7 @@ class Stack {
     return r.item;
   }
 }
+
+module.exports = {
+  Stack
+}
