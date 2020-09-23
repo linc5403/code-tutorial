@@ -70,6 +70,26 @@ class LinkedList {
     this.length--;
     return r.item;
   }
+
+    // 获取pos位置的元素, 只要item，不要Node
+    get() {}
+
+    // 修改pos位置的元素
+    modify() {}
+  
+    // 判断顺序表是否为空（一个元素都没有称为空）
+    isEmpty() {}
+
+    getLength() {
+      // head
+      let t = this.head;
+      let count = 0;
+      while(t != null) {
+        t = t.next;
+        count++;
+      }
+      return count;
+    }
 }
 
 let l = new LinkedList();
