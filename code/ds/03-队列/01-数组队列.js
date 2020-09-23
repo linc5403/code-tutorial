@@ -34,3 +34,7 @@ class ArrayQueue {
     return this.delete(0);
   }
 }
+
+module.exports = {
+  ArrayQueue,
+}
