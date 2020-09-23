@@ -1,7 +1,7 @@
 const rand = require("./randArray");
 const swap = require("./swap").swap;
 
-function insertion(a) {
+function insertionSort(a) {
   // i 从1开始， 到length-1， 将a[i]放到合适位置
   for (let i = 1; i < a.length; i++) {
     let j = i;
@@ -12,6 +12,6 @@ function insertion(a) {
   }
 }
 
-let a = rand.randN(10);
-insertion(a);
-console.log(a);
+module.exports = {
+  insertion: insertionSort,
+};
