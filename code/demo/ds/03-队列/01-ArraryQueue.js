@@ -1,6 +1,6 @@
-// 数组栈
+// 顺序表的队列- ArrayQueue
 // 底层数据结构是数组
-class ArrayStack {
+class ArrayQueue {
   // 构造函数， 初始化底层的数组
   constructor() {
     this.array = [];
@@ -57,23 +57,17 @@ class ArrayStack {
     return this.array.length == 0;
   }
 
-  // 新增栈的方法
-  // push -> 将item加入到现有数组的最右边（栈顶）
-  push(item) {
+  // 将元素item入队列(放在length-1的位置)
+  enqueue(item) {
     return this.insert(item, this.array.length);
   }
 
-  // pop -> 从数组中删除最右边（栈顶）元素，并返回它的值
-  pop() {
-    return this.delete(this.array.length - 1);
+  // 出队列(将位置0的元素出队列)
+  dequeue() {
+    return this.delete(0);
   }
 
-  // 查看栈顶元素的值
   peep() {
-    return this.get(this.array.length - 1);
+    return this.get(0);
   }
 }
-
-module.exports = {
-  ArrayStack,
-};
