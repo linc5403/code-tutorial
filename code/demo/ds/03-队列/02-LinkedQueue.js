@@ -113,3 +113,7 @@ class LinkedQueue {
     return this.get(0);
   }
 }
+
+module.exports = {
+  Queue: LinkedQueue,
+};
