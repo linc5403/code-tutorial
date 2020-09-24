@@ -1,5 +1,6 @@
 // 顺序表的队列- ArrayQueue
 // 底层数据结构是数组
+// eslint-disable-next-line no-unused-vars
 class ArrayQueue {
   // 构造函数， 初始化底层的数组
   constructor() {
