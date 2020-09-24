@@ -43,7 +43,7 @@ class ArrayQueue {
 
   // 获取pos位置的元素
   get(pos) {
-    if (pos <= 0 || pos >= this.array.length) {
+    if (pos < 0 || pos >= this.array.length) {
       return null;
     }
     return this.array[pos];
