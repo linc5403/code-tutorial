@@ -1,4 +1,4 @@
-// 单链表
+// 单链表实现的栈
 
 // 定义节点的类(class)
 class Node {
@@ -8,7 +8,7 @@ class Node {
   }
 }
 
-class LinkedList {
+class LinkedStack {
   constructor() {
     this.head = null;
     this.length = 0;
@@ -71,37 +71,32 @@ class LinkedList {
     return r.item;
   }
 
-    // 获取pos位置的元素, 只要item，不要Node
-    get(pos) {
-      if (pos < 0 || pos >= this.length) {
-        return null;
-      }
-      return this.findPos(pos).item;
+  // 获取pos位置的元素, 只要item，不要Node
+  get(pos) {
+    if (pos < 0 || pos >= this.length) {
+      return null;
     }
+    return this.findPos(pos).item;
+  }
 
-    // 修改pos位置的元素
-    modify() {}
-  
-    // 判断顺序表是否为空（一个元素都没有称为空）
-    isEmpty() {
-      return this.length == 0;
-    }
+  // 修改pos位置的元素
+  modify() {}
 
-    getLength() {
-      // head
-      let t = this.head;
-      let count = 0;
-      while(t != null) {
-        t = t.next;
-        count++;
-      }
-      return count;
-    }
+  // 判断顺序表是否为空（一个元素都没有称为空）
+  isEmpty() {
+    return this.length == 0;
+  }
+
+  push(item) {
+    return this.insert(item, 0);
+  }
+
+  pop() {
+    return this.delete(0);
+  }
+
+  peep() {
+    // 如果是个空链表，findPos会返回null
+    return this.findPos(0);
+  }
 }
-
-let l = new LinkedList();
-l.insert(10, 0);
-l.insert(20, 0);
-l.insert(30, 1);
-console.log(l);
-console.log(l.insert(50, 10));

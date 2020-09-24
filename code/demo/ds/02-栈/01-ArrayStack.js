@@ -1,6 +1,6 @@
 // 顺序表-ArrayList
 // 底层数据结构是数组
-class ArrayList {
+class ArrayStack {
   // 构造函数， 初始化底层的数组
   constructor() {
     this.array = [];
@@ -56,15 +56,20 @@ class ArrayList {
   isEmpty() {
     return this.array.length == 0;
   }
-}
 
-let l = new ArrayList();
-l.insert(10, 0);
-l.insert(20, 0);
-l.insert(30, 1);
-console.log(l);
-console.log(l.insert(50, 10));
-console.log(l.delete(0));
-console.log(l.delete(1));
-console.log(l.delete(1));
-console.log(l);
+  // 新增栈的方法
+  // push -> 将item加入到现有数组的最右边（栈顶）
+  push(item) {
+    return this.insert(item, this.array.length);
+  }
+
+  // pop -> 从数组中删除最右边（栈顶）元素，并返回它的值
+  pop() {
+    return this.delete(this.array.length-1);
+  }
+
+  // 查看栈顶元素的值
+  peep() {
+    return this.get(this.array.length-1);
+  }
+}
