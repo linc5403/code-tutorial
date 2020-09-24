@@ -100,3 +100,10 @@ class LinkedStack {
     return this.findPos(0);
   }
 }
+
+
+// module表示一个模块，简单理解就是一个js文件
+// 用在Node.js环境中
+module.exports = {
+  Stack: LinkedStack,
+};
