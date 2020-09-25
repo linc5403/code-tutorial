@@ -1,9 +1,4 @@
-// 交换数组a中的i和j元素
-function swapArray(a, i, j) {
-  let t = a[i];
-  a[i] = a[j];
-  a[j] = t;
-}
+const swap = require("./lib").swap;
 
 function selectionSort(a) {
   // i表示未排序的元素开始的下标
@@ -20,15 +15,11 @@ function selectionSort(a) {
     if (i != min) {
       // i不是最小的元素，才需要交换
       // 交换min和i
-      swapArray(a, i, min);
+      swap(a, i, min);
     }
   }
 }
 
-let a = [];
-for (let i = 0; i < 5; i++) {
-  a.push(Math.floor(Math.random() * 100));
+module.exports = {
+  sort: selectionSort,
 }
-console.log(a);
-selectionSort(a);
-console.log(a);
