@@ -98,3 +98,7 @@ class Bst {
     }
   }
 }
+
+module.exports = {
+  Bst,
+};
