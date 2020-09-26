@@ -1,0 +1,92 @@
+.chat-container{
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+}
+
+.chat-header{
+    height: 94px;
+    margin: 0 25px;
+    padding-left: 85px;
+    border-bottom: 2px solid #F6F5F5;
+    font-size: 24px;
+    line-height: 94px;
+}
+
+.chat-content{
+    /* width:100%; */
+    overflow-y: auto;
+    height: calc(100vh - 245px - 56px);
+    padding:40px 110px 80px 110px;
+}
+
+/* 聊天框 */
+.chat-content-container{
+    width: 520px;
+    min-height: 125px;
+    margin-top: 55px;
+}
+
+/* .chat-detail{
+
+
+} */
+
+.chat-detail-left{
+    float:left;
+}
+
+.chat-detail-right{
+    float: right;
+    text-align: left;
+    width:320px;
+    min-height:60px;
+    line-height: 60px;
+    border-radius: 40px;
+    padding:0 40px;
+    background-color: #F6F5F5;
+
+    /* 换行 */
+    overflow:hidden;
+    overflow-wrap: break-word;
+}
+
+.chat-avatar{
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    /* display: block; */
+}
+
+.chat-name{
+    width:60px;
+    color:#BDBDBD;
+    text-align: center;
+}
+
+.chat-time{
+    color:#BDBDBD;
+}
+
+/* 输入 */
+.chat-input-container{
+    width: 87%;
+    height: 60px;
+    text-align: center;
+    margin: 0 auto 56px auto;
+    position: relative;
+}
+
+.chat-input{
+    width: calc(100% - 160px );
+    height: 100%;
+    padding: 0 80px;
+    line-height: 92px;
+    outline:none;
+}
+
+.chat-intput-smile{
+    position: absolute;
+    left:20px;
+    top:8px;
+}

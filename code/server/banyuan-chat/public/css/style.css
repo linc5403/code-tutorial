@@ -1,0 +1,15 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: PingFang-SC-Medium;
+  font-size: 16px;
+  color:#3C3B3B;
+  overflow: hidden;
+}
+
+.clearFix::after{
+  content:'';
+  display: block;
+  clear: both;
+}
+
