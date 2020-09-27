@@ -1,4 +1,3 @@
-const rand = require("./randArray");
 const swap = require("./swap").swap;
 
 function insertionSort(a) {

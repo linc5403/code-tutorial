@@ -97,6 +97,27 @@ class Bst {
       return false;
     }
   }
+
+  // 先序遍历， 中左右
+  preTraverse(root) {
+    if (root != null) {
+      // 处理中间节点
+      console.log(root.item);
+
+      this.preTraverse(root.l);
+
+      this.preTraverse(root.r);
+    }
+  }
+
+  // 右中左的顺序遍历
+  desc(root) {
+    if (root != null) {
+      this.desc(root.r);
+      console.log(root.item);
+      this.desc(root.l);
+    }
+  }
 }
 
 module.exports = {
