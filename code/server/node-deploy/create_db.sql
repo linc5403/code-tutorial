@@ -9,4 +9,4 @@ CREATE TABLE IF NOT EXISTS `players` (
     `image` varchar(255) NOT NULL,
     `user_name` varchar(20) NOT NULL,
     PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1;

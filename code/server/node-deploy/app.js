@@ -1,22 +1,22 @@
 const express = require('express');
 const fileUpload = require('express-fileupload');
 const bodyParser = require('body-parser');
-const mysql = require('mysql');
+const mysql = require('mysql2');
 const path = require('path');
 
 const app = express();
 
 const playerRoutes = require('./routes/player.routes');
 const homeRoutes = require('./routes/index.routes');
-const port = 80;
+const port = 4000;
 
 
 // create connection to database
 // the mysql.createConnection function takes in a configuration object which contains host, user, password and the database name.
 const db = mysql.createConnection ({
     host: 'localhost',
-    user: 'root',
-    password: '',
+    user: 'banyuan',
+    password: 'asdf1234',
     database: 'socka'
 });
 
