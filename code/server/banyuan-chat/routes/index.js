@@ -40,10 +40,10 @@ module.exports =  (router) => {
 
     const avatar = getRandomAvatar();
 
-    ctx.cookies.set('user', JSON.stringify({
+    ctx.cookies.set('user', Buffer.from(JSON.stringify({
       username,
       avatar
-    })); 
+    })).toString('base64')); 
 
     ctx.response.body =  { ok : 1 };
   })
@@ -55,7 +55,7 @@ module.exports =  (router) => {
   router.get('/chat', async (ctx, next) => {
     
     // 获取 用户名
-    const { username,avatar } = JSON.parse(ctx.cookies.get('user'));
+    const { username,avatar } = JSON.parse(Buffer.from(ctx.cookies.get('user'), 'base64').toString());
 
     const content = await getUserChatContent();
 
@@ -84,7 +84,7 @@ module.exports =  (router) => {
     
     const data = ctx.request.body;
 
-    const { avatar } = JSON.parse(ctx.cookies.get('user'));
+    const { avatar } = JSON.parse(Buffer.from(ctx.cookies.get('user'), 'base64').toString());
 
     data.avatar = avatar;
 
