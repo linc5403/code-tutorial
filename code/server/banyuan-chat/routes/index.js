@@ -1,5 +1,18 @@
 const { getUserChatContent,insertUserChatContent } = require('../services/chat');
 const user = require('../db/user');
+const fs = require('fs');
+const { reject } = require('lodash');
+
+const readFileThunk = function(src) {
+  return new Promise(function (resolve, reject) {
+    fs.readFile(src, {'encoding': 'utf8'}, function (err, data) {
+      if(err) return reject(err);
+      resolve(data);
+      console.log(data);
+    });
+  });
+}
+
 
 /* 随机分配的头像 */
 let avatars = [
@@ -19,14 +32,14 @@ function getRandomAvatar(){
 }
 
 module.exports =  (router) => {
-
-
   router.get('/', async (ctx, next) => {
-    // ctx.body = 'Hello World'
-    ctx.state = {
-      title: '聊天'
-    }
-    await ctx.render('index', ctx.state)
+    ctx.body =await readFileThunk(__dirname + '/../public/html/index.html');
+    console.log("now now now*************")
+    console.log(ctx.body);
+    // ctx.state = {
+    //   title: '聊天'
+    // }
+    // await ctx.render('index', ctx.state)
   })
 
 

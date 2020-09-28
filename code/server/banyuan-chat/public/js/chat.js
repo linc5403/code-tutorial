@@ -7,7 +7,7 @@ $(document).ready(function(){
     addClickListenerOnInput();
 
     // 轮询获取聊天信息
-    // polling();
+    polling();
 
     // 定时器实例
     var timer;
