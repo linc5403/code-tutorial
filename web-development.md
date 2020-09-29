@@ -1,21 +1,21 @@
 
 # Table of Contents
 
-1.  [URL](#org881d61a)
-    1.  [localhost是什么？](#org48e4dd1)
-    2.  [作业：](#org5e9bd49)
-2.  [client - server的交互](#orga7fb644)
-    1.  [客户端发起请求](#org0a7359a)
-    2.  [服务器进行应答](#org19f6b30)
+1.  [URL](#org0feaf08)
+    1.  [localhost是什么？](#org770f4ab)
+    2.  [作业：](#org45a8a1d)
+2.  [client - server的交互](#org4bbf0d4)
+    1.  [客户端发起请求](#org1660789)
+    2.  [服务器进行应答](#orgc326854)
 
 
-<a id="org881d61a"></a>
+<a id="org0feaf08"></a>
 
 # URL
 
 统一资源定位符, 顾名思义，用来表示一个资源的位置
 
-<https://www.baidu.com/>
+示例： <https://www.baidu.com/>
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -116,7 +116,7 @@
 </table>
 
 
-<a id="org48e4dd1"></a>
+<a id="org770f4ab"></a>
 
 ## localhost是什么？
 
@@ -140,7 +140,7 @@
 而 `localhost` 字符串对应的ip地址是 `127.0.0.1` ， 在所有的电脑上，这个地址（ `127.0.0.1` ）表示本机，也就是这台电脑。
 
 
-<a id="org5e9bd49"></a>
+<a id="org45a8a1d"></a>
 
 ## 作业：
 
@@ -149,12 +149,12 @@
 <http://localhost:3000/players>
 
 
-<a id="orga7fb644"></a>
+<a id="org4bbf0d4"></a>
 
 # client - server的交互
 
 
-<a id="org0a7359a"></a>
+<a id="org1660789"></a>
 
 ## 客户端发起请求
 
@@ -171,7 +171,7 @@
 建立了TCP连接后，再根据protocol将这个URL封装在请求部分，发送给Server
 
 
-<a id="org19f6b30"></a>
+<a id="orgc326854"></a>
 
 ## 服务器进行应答
 
