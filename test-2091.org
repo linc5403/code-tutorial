@@ -1,0 +1,180 @@
+* 回答如下定义的含义
+  1. ~int (*ptr)[10];~
+
+     回答：
+
+  2. ~(void*)0~
+
+     回答：
+
+  3. ~int *f();~
+
+     回答：
+
+  4. ~char *p = (char*)malloc(100);~
+
+     回答：
+
+* 解释如下程序的执行结果
+
+
+  #+begin_src c
+    #include<stdio.h>
+
+    int main()
+    {
+	int i=0;
+	printf("%dn", i++);
+	return 0;
+    }
+  #+end_src
+
+  回答：
+
+  #+begin_src c
+    #include<stdio.h>
+    int get();
+
+    int main()
+    {
+	int x = get();
+	printf("%d", x);
+	return 0;
+    }
+    int get()
+    {
+	return 20;
+    }
+  #+end_src
+
+  回答：
+
+  #+begin_src c
+    #include<stdio.h>
+
+    int main()
+    {
+	int arr[5], i=0;
+	while(i<5)
+	    arr[i]=++i;
+
+	for(i=0; i<5; i++)
+	    printf("%d, ", arr[i]);
+
+	return 0;
+    }
+  #+end_src
+
+  回答：
+
+  #+begin_src c
+    #include<stdio.h>
+
+    int fun(int *f)
+    {
+	,*f = 10;
+	return 0;
+    }
+    int main()
+    {
+	const int arr[5] = {1, 2, 3, 4, 5};
+	printf("Before modification arr[3] = %d", arr[3]);
+	fun(&arr[3]);
+	printf("nAfter modification arr[3] = %d", arr[3]);
+	return 0;
+    }
+  #+end_src
+
+  回答：
+
+  #+begin_src c
+    #include
+
+    int main()
+    {
+	char str[20] = "Hello";
+	char * p=str;
+	,*p='M';
+	printf("%sn", str);
+	return 0;
+    }
+  #+end_src
+
+  回答：
+
+  #+begin_src c
+    #include<stdio.h>
+
+    int main()
+    {
+	char *s = "";
+	char str[] = "Hello";
+	s = str;
+	while(*s)
+	    printf("%c", *s++);
+
+	return 0;
+    }
+  #+end_src
+
+  回答：
+
+  #+begin_src c
+    #include <stdio.h>
+
+    int main()
+    {
+	float arr[] = {12.4, 2.3, 4.5, 6.7};
+	printf("%dn", sizeof(arr)/sizeof(arr[0]));
+	return 0;
+    }
+  #+end_src
+
+  回答：
+
+  #+begin_src c
+    #include <stdio.h>
+    int main()
+    {
+	int array[10] = {3, 0, 8, 1, 12, 8, 9, 2, 13, 10};
+	int x, y, z;
+	x = ++array[2];
+	y = array[2]++;
+	z = array[x++];
+	printf("%d %d %d", x, y, z);
+	return 0;
+    }
+  #+end_src
+
+  回答：
+
+  #+begin_src c
+    #include <stdio.h>
+    int main()
+    {
+	int x = 6;
+	int y = 4;
+	int z;
+	if(!x >= 5)
+	y = 3;
+	z = 2;
+	printf("%d %d", z, y);
+    return 0;
+    }
+  #+end_src
+
+  回答：
+
+  #+begin_src c
+    #include <stdio.h>
+    int main()
+    {
+	int a,b,c;
+	a = b = c = 10;
+	c = a++ || ++b && ++c;
+	printf("%d %d %d",c, a, b);
+	return 0;
+    }
+  #+end_src
+
+  回答：
