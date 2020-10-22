@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="中文">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{{ title }}</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/login.css" />
+    <link rel="stylesheet" type="text/css" href="css/chat.css" />
+
+    <script src="/js/chat.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="chat-container">
+      {# 用户名 #}
+      <div class="chat-header">{{ username }}</div>
+
+      {# 聊天主体 #}
+      <div class="chat-content">
+        {% for item in content %}
+        <div class="chat-content-container">
+          {# #}
+          <div class="chat-detail clearFix">
+            {# 左侧，用户信息 #}
+            <div class="chat-detail-left">
+              <img src="{{ item.avatar }}" class="chat-avatar" />
+              <div class="chat-name">{{ item.name }}</div>
+            </div>
+
+            {# 右侧，聊天内容 #}
+            <div class="chat-detail-right">{{ item.content }}</div>
+          </div>
+
+          {# 时间 #}
+          <div class="chat-time">{{ item.createdAt | formatTime }}</div>
+        </div>
+
+        {% endfor %}
+      </div>
+
+      <div class="chat-input-container">
+        <i class="fa fa-smile-o fa-3x chat-intput-smile"></i>
+        <input placeholder="信息输入...." class="chat-input" value="" />
+      </div>
+    </div>
+  </body>
+
+  <script src="/js/jquery.js" type="text/javascript"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/moment.js/2.27.0/locale/zh-cn.js"></script>
+
+  {% block script %}{% endblock %}
+</html>

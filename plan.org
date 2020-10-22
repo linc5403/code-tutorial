@@ -1,0 +1,32 @@
+* 预备课
+* 基础课
+** 计算机导论（3天）
+** 编程入门（10天）
+*** roadmap
+    #+begin_src plantuml :file ./img/roadmap.svg
+      @startmindmap
+      ,* 编程入门
+      ,** HTML(结构)
+      ,*** 文档结构
+      ,*** 常用行元素和快元素
+      ,*** 表格和表单
+      ,** CSS(样式)
+      ,** JavaScript(行为)
+      ,** Node.js(服务器侧)
+      ,** Mysql(数据库)
+      ,** 项目部署
+      @endmindmap
+    #+end_src
+
+    #+RESULTS:
+    [[file:./img/roadmap.svg]]
+
+*** HTML基础（1天）
+*** CSS基础（1天）
+*** JavaScript基础（2天）
+*** MySQL入门（1天）
+*** Node.js入门（2天）
+*** 前后端交互（2天）
+*** Web项目部署（1天）
+** 数据结构和算法（7天）
+
