@@ -8,7 +8,7 @@
   |-----------------------+------------------------------------------+-----------------------------------------------------------------|
   | protocol              | https                                    | 使用https协议进行通信                                           |
   | host name/domain name | www.baidu.com                            | 主机域名或是ip地址，此处表示server所在的主机域名是www.baidu.com |
-  | path                  | /                                        | 路径字段，代表访问server所表示的'/'资源                                |
+  | path                  | /                                        | 路径字段，代表访问server所表示的'/'资源                         |
   | port                  | 没有显示表示，因为是https协议，所以是443 | 表示该web Server所监听的端口号                                  |
 
 
@@ -46,6 +46,8 @@
  
 ** 作业：
    列出下面url的各组成部分和代表的含义
+
+   http://localhost:3001/
 
    http://localhost:3000/players
 
