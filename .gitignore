@@ -1,4 +1,6 @@
+101/resource/
 .DS_Store
 \#*
 *\#
 *.swp
+.*.html
