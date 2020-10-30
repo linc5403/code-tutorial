@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>选择器的组合</title>
+    <style>
+      /* 多个选择器放在一起， 中间用逗号隔开，选择其中满足条件的任意一个选择器 */
+      /* article,div {
+      color:aqua;
+    } */
+      /* 把多个选择器放在一起， 中间没有空格， 表示必须符合所有条件 */
+
+      /* .bar.foo {
+      font-size: 25px;
+    } */
+      /* 多个选择器中间用大于号（>）连接， 表示是直接的父子关系 */
+      /* article>p>q {
+      background-color: cornsilk;
+    } */
+
+      /* 多个选择器中间使用空格连接，表示选择符合祖先-后代的关系 */
+      /* div span {
+      background-color: blueviolet;
+    } */
+
+      /* 兄弟选择器只能选择靠在前一个元素后面的元素， 不能选择前面的（前面的是哥哥） */
+
+      /* 邻接兄弟， 紧挨着前一个选择器， 中间不能有其他的元素， 而且只选择这一个兄弟 */
+      q + span {
+        font-size: 30px;
+      }
+
+      /* 位于第一个选择器之后的兄弟， 满足第二个选择器条件， 都会被选中 */
+      q ~ span {
+        background-color: antiquewhite;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>标题</h1>
+    </header>
+    <p class="bar foo">第1段</p>
+    <article>
+      <p class="bar">第2段</p>
+      <p class="bar">
+        第3段
+        <span>明天放假</span>
+        <q>鲁迅说</q>
+        <strong></strong>
+        <span>这货不对</span>
+        <em>强调说</em>
+        <span>今天星期五</span>
+      </p>
+      <p class="bar">第4段</p>
+      <p class="bar">第5段</p>
+    </article>
+    <div>
+      <span>这是一个div下的span</span>
+      <p class="foo">第6段</p>
+      <p class="foo">
+        第7段<span
+          >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+          molestiae tenetur possimus soluta vitae rem dicta hic, labore veniam
+          debitis amet est distinctio explicabo eum magnam voluptate, deleniti
+          reprehenderit recusandae.</span
+        >
+      </p>
+      <p class="foo">第8段</p>
+      <p class="foo">第9段</p>
+      <p class="foo">第10段</p>
+    </div>
+  </body>
+</html>

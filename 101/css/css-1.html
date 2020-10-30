@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>基本选择器</title>
+    <style>
+      h2 {
+        background-color: aqua;
+        font-size: 30px;
+      }
+      p {
+        color: blueviolet;
+      }
+
+      .red {
+        color: red;
+      }
+
+      .font100 {
+        font-size: 100px;
+      }
+
+      #p4 {
+        background-color: blanchedalmond;
+      }
+      [href="https://www.baidu.com"] {
+        font-size: 50px;
+      }
+      * {
+        font-size: 30px;
+        font-style: italic;
+      }
+    </style>
+    <!-- 外部样式表， 使用头部的link标签来引入 -->
+    <!-- <link rel="stylesheet" href="./css-1.css"> -->
+  </head>
+  <body>
+    <!-- 行内样式， 直接写到html的元素开标签， style是属性的名字， 表示是样式 -->
+    <h1 style="font-size: 40px">整篇文章的标题</h1>
+    <h2>第一点</h2>
+    <p>第一自然段</p>
+    <h2 class="red font100">第二点</h2>
+    <p>第二自然段</p>
+    <p class="red">第3自然段</p>
+    <p class="red" id="p4">第4自然段</p>
+    <p class="red">第5自然段</p>
+    <a href="https://www.baidu.com">百度</a>
+    <br>
+    <img src="../img/1.jpg" alt="一朵小花" width="300px">
+  </body>
+</html>
