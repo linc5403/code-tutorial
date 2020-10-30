@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>特殊选择器(伪类和伪元素选择器)</title>
+  <style>
+    /* :first-child是指的作为第一个儿子元素存在于文档中 */
+    .father>:first-child {
+      font-size: 50px;
+    }
+
+    .father>:last-child {
+      color:red;
+    }
+    .father>:nth-child(2n+1) {
+      font-style: italic;
+    }
+    .bar:first-of-type{
+      font-size: 5px;
+    }
+    a {
+      font-size: 50px;
+    }
+    a:link {
+      font-size: 30px;
+      color:red;
+    }
+    a:visited {
+      color: blue;
+      font-size: 50px;
+    }
+    a:hover {
+      font-size: 50px;
+      background-color: black;
+    }
+    a:active {
+      font-size: 80px;
+    }
+    q::before{
+      content: "[";
+    }
+    q::after{
+      content: "]";
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>标题</h1>
+  </header>
+  <p class="bar foo">第1段</p>
+  <article>
+    <p class="bar">第2段</p>
+    <p class="bar father">
+      第3段
+      <span>明天放假</span>
+      <q>鲁迅说</q>
+      <strong>strong</strong>
+      <span>这货不对</span>
+      <em>强调说</em>
+      <span>今天星期五</span>
+    </p>
+    <p class="bar" for="abc">第4段</p>
+    <p class="bar" for="def">第5段</p>
+  </article>
+  <a href="javascript:;">访问不到的超链接</a>
+  <br>
+  <a href="https://jd.com">京东</a>
+  <div>
+    <span>这是一个div下的第一个span</span>
+    <br>
+    <span>这是一个div下的第二个span</span>
+    <p class="foo">第6段</p>
+    <p class="foo">第7段</p>
+    <p class="foo">第8段</p>
+    <p class="foo">第9段</p>
+    <p class="foo">第10段</p>
+  </div>
+</body>
+</body>
+</html>

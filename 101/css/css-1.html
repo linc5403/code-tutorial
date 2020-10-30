@@ -24,13 +24,39 @@
       #p4 {
         background-color: blanchedalmond;
       }
-      [href="https://www.baidu.com"] {
+
+      [href="https://www.baidu.com"]
+      {
         font-size: 50px;
       }
+
+      [href="https://www.baidu.com"]
+      {
+        font-size: 50px;
+      }
+
       * {
         font-size: 30px;
         font-style: italic;
       }
+      /* 选择带foo属性的元素 */
+      [foo] {
+        background-color: black;
+      }
+
+      /* 有foo属性， 而且foo的值是以jack结尾 */
+      [foo$="jack"] {
+        color: red;
+      }
+      /* 有foo属性  ，而且foo的值是以jack开头 */
+      [foo^="jack"] {
+        margin: 50px;
+      }
+      /* 既是p元素，而且foo属性的值包含jack这个字符串 */
+      p[foo*="jack"] {
+        border-style: dashed;
+      }
+
     </style>
     <!-- 外部样式表， 使用头部的link标签来引入 -->
     <!-- <link rel="stylesheet" href="./css-1.css"> -->
@@ -38,15 +64,15 @@
   <body>
     <!-- 行内样式， 直接写到html的元素开标签， style是属性的名字， 表示是样式 -->
     <h1 style="font-size: 40px">整篇文章的标题</h1>
-    <h2>第一点</h2>
-    <p>第一自然段</p>
+    <h2 foo="john.jack">第一点</h2>
+    <p foo="jack.ma">第一自然段</p>
     <h2 class="red font100">第二点</h2>
     <p>第二自然段</p>
     <p class="red">第3自然段</p>
     <p class="red" id="p4">第4自然段</p>
     <p class="red">第5自然段</p>
     <a href="https://www.baidu.com">百度</a>
-    <br>
-    <img src="../img/1.jpg" alt="一朵小花" width="300px">
+    <br />
+    <img src="../img/1.jpg" alt="一朵小花" width="300px" />
   </body>
 </html>
