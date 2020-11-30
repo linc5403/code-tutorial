@@ -37,11 +37,31 @@
     a:active {
       font-size: 80px;
     }
+
+    /* 选择处于某些状态的文字或者位置 */
+    p::first-letter{
+      font-size: 50px;
+    }
+
+    p::first-line{
+      background-color: beige;
+    }
+
+    p::selection{
+      color: red;
+    }
+
+    p::before{
+      content: "****";
+    }
+
     q::before{
       content: "[";
+      color: blue;
     }
     q::after{
       content: "]";
+      color: red;
     }
 
   </style>
@@ -50,11 +70,11 @@
   <header>
     <h1>标题</h1>
   </header>
-  <p class="bar foo">第1段</p>
+  <p class="bar foo">第1段 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero alias sit commodi doloremque natus pariatur, qui ipsam! Ullam sapiente sit nam est, itaque, quisquam laborum omnis distinctio similique praesentium sed.</p>
   <article>
-    <p class="bar">第2段</p>
+    <p class="bar">第2段 Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia fuga neque porro accusantium, earum quidem repudiandae! Numquam, delectus iusto accusantium fugiat corporis ratione ullam similique recusandae porro totam, et inventore?</p>
     <p class="bar father">
-      第3段
+      第3段Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis, corrupti vitae quod aspernatur natus officia hic blanditiis voluptas alias deleniti temporibus aperiam iste nesciunt veniam atque repellat deserunt est dolorem?
       <span>明天放假</span>
       <q>鲁迅说</q>
       <strong>strong</strong>
